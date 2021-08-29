@@ -1,29 +1,41 @@
 
+<div class="container">
+
+  <% if @json %>
+
+<div class="row row-cols-1 row-cols-md-3 mt-4">
+
+  <% @json["results"].each do |podcast| %>
+
+<div class="col mb-4">
+
+
+    <div class="card h-100" style="border-radius: 10px;">
+        <%= image_tag podcast["artworkUrl600"], class:"card-img-top", style: "border-top-left-radius:10px; border-top-right-radius:10px;" %>
+
+
+        <div class="card-body">
+          <p class="card-title"> <%=  podcast["collectionName"] %> </p>
+        </div>
+
+      </div>
 
 
 
 
+</div>
 
-<%= form_with(url: search_path, method: "get") do %>
-  <%= label_tag(:term, "Enter term name:") %>
-  <%= text_field_tag(:term) %>
-  <%= submit_tag("Search") %>
 <% end %>
 
-<% if @json %>
-  <div>
-    <% @json["results"].each do |podcast| %>
-    <div class="text-center" style="text-align: left;">
-      <li> <%=  podcast["collectionName"] %> </li>
-      <%= image_tag podcast["artworkUrl600"], style: "width:20%" %>
+
+</div>
 
 
-    </div>
-
-
-    <% end %>
-  </div>
 <% end %>
+
+</div>
+
+
 
 
 
