@@ -1,8 +1,5 @@
 class SearchController < ApplicationController
 
-# include Itunes
-# require 'json'
-
   def index
 
     @response = Faraday.get do |req|
@@ -15,13 +12,6 @@ class SearchController < ApplicationController
       # req.params['country'] = "GB"
     end
     @json = JSON.parse(@response.body)
-
-
-    # if params['term']
-    #   @response = Itunes::Search.by_term(params['term'])
-    # end
-
-    #  @json = JSON.parse(@response)
 
   end
 
