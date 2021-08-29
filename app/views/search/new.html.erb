@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-6"> -->
+      <div class="d-flex mt-4" style="height:95%; width:100%;">
+
+        <div class="text-center" style="width: 40%">
+          <h1>Headline Text</h1>
+          <p>Some descriptive text</p>
+
+          <%= form_with(url: search_path, method: "get", local: true) do %>
+          <%= label_tag(:term, "Enter term name:") %>
+          <%= text_field_tag(:term) %>
+          <%= submit_tag("Search") %>
+          <% end %>
+
+        </div>
+
+
+        <!-- <div class="text-center" style="width: 60%">
+          <%#= image_tag('bird.svg', style: "height: 90%") %>
+        </div> -->
+
+
+
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
