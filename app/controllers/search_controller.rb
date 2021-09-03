@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
 
+  include Pagy::Backend
+
   def index
 
     @response = Faraday.get do |req|
@@ -16,6 +18,10 @@ class SearchController < ApplicationController
     end
 
     @json = JSON.parse(@response.body)
+
+    @pagy_a, @results = pagy_array(@json['results'], items: 10)
+
+
 
   end
 
