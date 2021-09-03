@@ -36,6 +36,7 @@ gem 'simple_form'
 
 gem 'devise'
 gem 'faraday'
+gem 'pagy', '~> 4.11'
 
 group :development, :test do
   gem 'pry-byebug'
