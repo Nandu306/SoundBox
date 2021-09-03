@@ -19,7 +19,7 @@ class SearchController < ApplicationController
 
     @json = JSON.parse(@response.body)
 
-    @pagy_a, @results = pagy_array(@json['results'], items: 10)
+    @pagy_a, @results = pagy_array(@json['results'], items: 12)
 
 
 

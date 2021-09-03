@@ -1,7 +1,7 @@
 
 <div class="container">
 
-  <div class="mx-auto mt-5">
+  <div class="mx-auto mt-5 centered">
 
     <%== pagy_bootstrap_nav(@pagy_a) %>
 
@@ -17,8 +17,9 @@
     <div class="col mb-4">
 
 
-      <div class="card h-100" style="border-radius: 10px;">
-        <%= image_tag podcast["artworkUrl600"], class:"card-img-top", style: "border-top-left-radius:10px; border-top-right-radius:10px;" %>
+      <div class="card shadow-sm h-100" style="border-radius: 10px;">
+
+        <%= image_tag podcast["artworkUrl600"], style: "border-top-left-radius:10px; border-top-right-radius:10px; object-fit:cover; width:100%; height:50vh" %>
 
 
         <div class="card-body">
