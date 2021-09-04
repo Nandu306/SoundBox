@@ -35,7 +35,7 @@ gem 'simple_form'
 # gems added by me
 
 gem 'devise'
-gem 'faraday'
+gem 'faraday', '~> 1.7', '>= 1.7.1'
 gem 'pagy', '~> 4.11'
 
 group :development, :test do
