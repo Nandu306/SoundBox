@@ -1,29 +1,32 @@
 <div class="container">
   <div class="row">
     <!-- <div class="col-6"> -->
-      <div class="d-flex mt-4" style="height:95%; width:100%;">
+      <div class="d-flex mt-4" style="height:80vh; width:100%;">
 
-        <div class="text-center" style="width: 40%">
-          <h1>Headline Text</h1>
-          <p>Some descriptive text</p>
+        <div class="mx-auto text-center" style="width: 50%; float:left;position: relative;">
 
-          <%= simple_form_for :search, url: search_path, method: "get" do |f| %>
-          <%= f.input :term, placeholder: "What do you want to listen to?", label: false %>
-          <% f.button :submit %>
-          <% end %>
+          <div style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; width: 80%;">
+            <h1>Headline Text</h1>
+            <p>Some descriptive text</p>
 
-          <%#= form_tag(search_path, method: "get") do %>
+            <br>
 
-          <%#= text_field_tag(:term) %>
-          <%# submit_tag %>
-          <%# end %>
+            <%= simple_form_for :search, url: search_path, method: "get" do |f| %>
+            <%= f.input :term, placeholder: "What do you want to listen to?", label: false %>
+            <% f.button :submit %>
+            <% end %>
+          </div>
+
+
 
         </div>
 
+        <div style="overflow:hidden; width: 5%"></div>
 
-        <!-- <div class="text-center" style="width: 60%">
-          <%#= image_tag('bird.svg', style: "height: 90%") %>
-        </div> -->
+        <div class="text-center" style="width: 50%; float:right;">
+
+          <%= image_tag 'bird.svg', style: "width:100%; cover:fit" %>
+        </div>
 
       </div>
       <!-- </div> -->
