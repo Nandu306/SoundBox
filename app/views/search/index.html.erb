@@ -2,50 +2,42 @@
 <div class="container">
 
   <div class="mx-auto mt-5 centered">
-
     <%== pagy_bootstrap_nav(@pagy_a) %>
-
   </div>
 
 
   <% if @results %>
 
-  <div class="row row-cols-1 row-cols-md-3 mt-4">
+    <div class="row row-cols-1 row-cols-md-3 mt-5">
 
-    <% @results.each do |podcast| %>
+      <% @results.each do |podcast| %>
 
-    <div class="col mb-4">
+        <div class="col mb-4">
+          <div class="card shadow-sm h-100" style="border-radius: 10px; border: 1px solid grey;">
 
-
-      <div class="card shadow-sm h-100" style="border-radius: 10px; border: 1px solid grey;">
-
-        <%= image_tag podcast["artworkUrl600"], style: "border-top-left-radius:10px; border-top-right-radius:10px; object-fit:cover; width:100%; height:50vh" %>
+            <%= image_tag podcast["artworkUrl600"], style: "border-top-left-radius:10px; border-top-right-radius:10px; object-fit:cover; width:100%; height:50vh" %>
 
 
-        <div class="card-body d-flex justify-content-between">
-          <p class="card-title"> <%=  podcast["collectionName"].truncate(30) %> </p>
+            <div class="card-body d-flex justify-content-between">
+              <p class="card-title"> <%=  podcast["collectionName"].truncate(30) %> </p>
+            </div>
 
-          <%= link_to '->', podcast["trackViewUrl"], style: "justify-content:end", target: :_blank %>
+            <div class="d-flex align-items-center justify-content-between" style="margin:10px;">
+              <div style= "border-radius:10px; font-size:12px; display:inline-block;padding: 5px;">
+                <%= podcast["primaryGenreName"] %>
+              </div>
 
-        </div>
+              <%= link_to 'See more', podcast["trackViewUrl"], style: "font-size:12px;", target: :_blank %>
+            </div>
 
-        <div class ="justify-content-end" style= "border-radius:10px; background-color: lightgrey; font-size:12px; display:  inline-block;padding: 5px;">
-          <%= podcast["primaryGenreName"] %>
-        </div>
-
+          </div>
       </div>
+
+      <% end %>
 
     </div>
 
-    <% end %>
-
-
-  </div>
-
-
   <% end %>
-
-
 
 </div>
 

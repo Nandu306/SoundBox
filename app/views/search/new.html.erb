@@ -1,34 +1,30 @@
 <div class="container">
   <div class="row">
-    <!-- <div class="col-6"> -->
-      <div class="d-flex mt-4" style="height:80vh; width:100%;">
+      <div class="column mt-4 dimensions">
 
-        <div class="mx-auto text-center" style="width: 50%; float:left;position: relative;">
+        <div class="text-center right-side">
+          <%= image_tag 'bird.svg', style: "width:100%; cover:fit" %>
+        </div>
 
-          <div style="position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; width: 80%;">
-            <h1>Headline Text</h1>
-            <p>Some descriptive text</p>
+        <div class="no-space" style="overflow:hidden; width: 5%"></div>
+
+        <br class="mobile-space">
+        <br class="mobile-space">
+
+
+        <div class="mx-auto text-center left-side">
+          <div class="middle">
+            <h3 style="font-weight: bold;"> What do you want to listen to?  </h3>
 
             <br>
 
             <%= simple_form_for :search, url: search_path, method: "get" do |f| %>
-            <%= f.input :term, placeholder: "What do you want to listen to?", label: false %>
-            <% f.button :submit %>
+              <%= f.input :term, placeholder: "Search iTunes for a podcast", label: false %>
+              <% f.button :submit %>
             <% end %>
           </div>
-
-
-
-        </div>
-
-        <div style="overflow:hidden; width: 5%"></div>
-
-        <div class="text-center" style="width: 50%; float:right;">
-
-          <%= image_tag 'bird.svg', style: "width:100%; cover:fit" %>
         </div>
 
       </div>
-      <!-- </div> -->
     </div>
   </div>
