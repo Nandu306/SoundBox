@@ -8,7 +8,6 @@
 <p>
   
 - Apple API
-- Figma (wireframing/prototyping)
 - Ruby on Rails
 - git
 - GitHub
@@ -17,5 +16,6 @@
 - HTML
 - CSS
 - Bootstrap
+- Gems: Pagy, Faraday  
   
 </p> 
