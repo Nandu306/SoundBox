@@ -12,7 +12,6 @@
 - git
 - GitHub
 - Heroku
-- PostgreSQL
 - HTML
 - CSS
 - Bootstrap
